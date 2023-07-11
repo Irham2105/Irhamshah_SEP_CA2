@@ -30,6 +30,28 @@
             document.addEventListener('DOMContentLoaded', function(){
                 member = JSON.parse(sessionStorage.getItem("member"));
 
+                if (member != null) {
+                const nameInput = document.getElementById("name");
+                const emailInput = document.getElementById("email");
+                const phoneInput = document.getElementById("phone");
+                const countryInput = document.getElementById("country");
+                const addressInput = document.getElementById("address");
+                const ageInput = document.getElementById("age");
+                const securityQuestionInput = document.getElementById("securityQuestion");
+                const securityAnswerInput = document.getElementById("securityAnswer");
+                const incomeInput = document.getElementById("income");
+
+                nameInput.value = member.name;
+                emailInput.value = member.email;
+                phoneInput.value = member.phone;
+                countryInput.value = member.city;
+                addressInput.value = member.address;
+                ageInput.value = member.age;
+                securityQuestionInput.value = member.securityQuestion;
+                securityAnswerInput.value = member.securityAnswer;
+                incomeInput.value = member.income;
+}
+
                 if(member.sla == 1) {
                     document.getElementById("serviceLevelAgreement").checked = true;
                 }
